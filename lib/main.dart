@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islami_c13/style/PrefsHelper.dart';
 import 'package:islami_c13/ui/home/screen/home_screen.dart';
 import 'package:islami_c13/ui/splash/screen/splash_screen.dart';
+import 'package:islami_c13/ui/sura_details/screen/suradetails_screen.dart';
 
-void main() {
+ main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
+  await PrefHelper.init();
   runApp(const MyApp());
 }
 
@@ -38,7 +42,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         SplashScreen.routeName:(_)=>SplashScreen(),
-        HomeScreen.routeName:(_)=>HomeScreen()
+        HomeScreen.routeName:(_)=>HomeScreen(),
+        SuraDetailsScreen.routeName:(_)=>SuraDetailsScreen()
       },
       initialRoute: SplashScreen.routeName,
     );
