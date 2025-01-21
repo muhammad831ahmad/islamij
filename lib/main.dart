@@ -5,6 +5,8 @@ import 'package:islami_c13/ui/home/screen/home_screen.dart';
 import 'package:islami_c13/ui/splash/screen/splash_screen.dart';
 import 'package:islami_c13/ui/sura_details/screen/suradetails_screen.dart';
 
+import 'ui/splash/screen/OBoarding_Screen.dart';
+
  main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
@@ -43,7 +45,8 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashScreen.routeName:(_)=>SplashScreen(),
         HomeScreen.routeName:(_)=>HomeScreen(),
-        SuraDetailsScreen.routeName:(_)=>SuraDetailsScreen()
+        SuraDetailsScreen.routeName:(_)=>SuraDetailsScreen(),
+        OnBoarding.routeName:(_)=>OnBoarding()
       },
       initialRoute: SplashScreen.routeName,
     );
